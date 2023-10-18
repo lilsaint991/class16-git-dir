@@ -12,3 +12,8 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Extract metadate (Tags and labels) for Docker image
+        id: meta
+        uses: docker/metadate-action@V4
+        with:
+          
