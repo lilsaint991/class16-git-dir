@@ -20,6 +20,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context:  .
-          push: true
-          tags: lilsaint91/class16-create-and-publish-docker-image:latest
+          context: .
+          push:  true
+          tags: ${{ steps.meat.output.tags }}
+          labels: ${{steps.meta.output.labels }}
